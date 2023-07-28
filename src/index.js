@@ -1,17 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './pages/header';
+import Projects from './pages/projects';
+import Services from './pages/services';
+import Studio from './pages/studio';
+import Home from './pages/home';
+import Blog from './pages/blog';
+import Pages from './pages/pages';
+import Cart from './pages/cart';
+
+import GetInTouch from './pages/getInTouch';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ToDoList from './tasks/toDoList';
+import DarkMode from './tasks/darkMode';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return (
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/studio" element={<Studio />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/pages" element={<Pages />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/getInTouch" element={<GetInTouch />} />
+          <Route path="/project/toDoList" element={<ToDoList />} />
+          <Route path="/project/darkMode" element={<DarkMode />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,13 +1,187 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    :root {
+        --white-color: #ffffff;
+        --custom-font: 'Roboto Mono', sans-serif;
+        --custom-background: #232323;
+        --page-width: 0 16px;
+    }
+/* scrollbar design */
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 2px;
+    /* Width of the scrollbar */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Scrollbar thumb color */
+    border-radius: 5px;
+    /* Rounded corners for the thumb */
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
+
+
+
+
+    body {
+        background-color: #121212;
+        color: var(--white-color);
+        padding: var(--page-width);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+        /* padding: var(--page-width); */
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+        /* Align to the left */
+        align-items: center;
+        text-decoration: none;
+        color: var(--white-color);
+        font-family: Satoshi, sans-serif;
+    }
+
+
+    .navbar {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        justify-content: flex-end;
+        gap: 1%;
+    }
+
+    nav {
+        display: flex;
+        width: 80%;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        background-color: var(--custom-background);
+        padding: 15px 0px;
+        font-family: Roboto Mono, sans-serif;
+        border-radius: 8px;
+        font-size: 14px;
+        width: 12%;
+        text-decoration: none;
+        text-align: center;
+        color: var(--white-color);
+        text-transform: uppercase;
+    }
+
+    .get-in-touch {
+        border-radius: 8px;
+        width: 12%;
+        padding: 15px 0;
+        word-spacing: 2px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        font-family: var(--custom-font);
+        background-color: #cebd63;
+        color: var(--custom-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    .home {
+        position: relative;
+    }
+
+    .home .banner-container .banner {
+        width: 100%;
+        border-radius: 10px;
+        filter: brightness(0.5);
+    }
+
+    .home .banner-container {
+        position: relative;
+
+
+    }
+
+    .home .banner-container .banner-content {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        width: 55%;
+        /* transform: translate(-50%, -50%); */
+    }
+
+    .home .banner-container .banner-content h1 {
+        text-transform: uppercase;
+        font-family: Chillax, sans-serif;
+        font-size: 8vw;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    .home .banner-container .banner-content p {
+        font-size: 1.25rem;
+        line-height: 160%;
+        width: 85%;
+        padding-top: 3%;
+    }
+
+    .home .banner-container .scroll-container {
+        position: absolute;
+        top: 80%;
+        right: 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .home .banner-container .scroll-container button {
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        -webkit-backdrop-filter: blur(2rem);
+        backdrop-filter: blur(2rem);
+        text-align: center;
+        background-color: rgba(255, 255, 255, .05);
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        line-height: 100%;
+        transition: background-color .2s, border .2s;
+        display: flex;
+        overflow: hidden;
+        transform: translate(0);
+        cursor: pointer;
+    }
+
+    .home .banner-container .scroll-container button svg {
+        color: var(--white-color);
+    }
+
+    /* todo-list */
+
+    .todo_list{
+
+    }
+
+
+    .final_card{
+        
+    }
