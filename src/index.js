@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './pages/header';
 import Projects from './pages/projects';
-import Services from './pages/services';
-import Studio from './pages/studio';
+import Products from './pages/products';
 import Home from './pages/home';
 import Blog from './pages/blog';
 import Pages from './pages/pages';
@@ -20,12 +19,11 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/studio" element={<Studio />} />
+          <Route path="/Products" element={<Products />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/pages" element={<Pages />} />
           <Route path="/cart" element={<Cart />} />
